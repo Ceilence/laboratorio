@@ -57,7 +57,7 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setText("jLabel6");
         jLabel6.setPreferredSize(new java.awt.Dimension(761, 721));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alefr\\Downloads\\TheKnife.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/theknife/TheKnife.png"))); // NOI18N
         jLabel7.setText("jLabel7");
 
         jLabel5.setBackground(new java.awt.Color(51, 255, 51));

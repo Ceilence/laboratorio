@@ -92,7 +92,7 @@ public class Reg1 extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("REGISTRAZIONE");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alefr\\Desktop\\depositphotos_665030182-stock-illustration-cook-line-color-filled-icons.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/theknife/depositphotos_665030182-stock-illustration-cook-line-color-filled-icons.jpg"))); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -104,7 +104,7 @@ public class Reg1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alefr\\Desktop\\Omino_stilizzato.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/theknife/Omino_stilizzato.png"))); // NOI18N
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N

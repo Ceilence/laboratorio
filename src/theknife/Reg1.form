@@ -215,7 +215,7 @@
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Alefr\Desktop\depositphotos_665030182-stock-illustration-cook-line-color-filled-icons.jpg"/>
+                  <Image iconType="3" name="/theknife/depositphotos_665030182-stock-illustration-cook-line-color-filled-icons.jpg"/>
                 </Property>
               </Properties>
             </Component>
@@ -239,7 +239,7 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Alefr\Desktop\Omino_stilizzato.png"/>
+                  <Image iconType="3" name="/theknife/Omino_stilizzato.png"/>
                 </Property>
               </Properties>
             </Component>
