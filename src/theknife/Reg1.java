@@ -49,7 +49,7 @@ public class Reg1 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alefr\\Downloads\\TheKnife.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/theknife/TheKnife.png"))); // NOI18N
         jLabel7.setText("jLabel7");
 
         jLabel5.setBackground(new java.awt.Color(51, 255, 51));
