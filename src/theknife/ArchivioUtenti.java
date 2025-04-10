@@ -34,4 +34,8 @@ public class ArchivioUtenti {
                 return 1;
         return 0;
     }
+    
+    public void svuotaArchivio(){
+        archivio.clear();
+    }
 }

@@ -61,6 +61,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(51, 255, 51));
         jLabel5.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("TheKnife");
 
         javax.swing.GroupLayout LogoLayout = new javax.swing.GroupLayout(Logo);
@@ -111,7 +112,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Username");
 
-        username.setBackground(new java.awt.Color(204, 204, 204));
         username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         username.setMargin(new java.awt.Insets(6, 6, 6, 6));
         username.setSelectionStart(6);
@@ -125,7 +125,6 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Password");
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPasswordField1.setPreferredSize(new java.awt.Dimension(73, 22));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +135,7 @@ public class Login extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
