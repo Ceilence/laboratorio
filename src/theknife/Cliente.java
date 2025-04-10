@@ -15,12 +15,14 @@ public class Cliente extends ArchivioUtenti{
     private String mailUtente;
     private String posizioneUtente;
     private String passUtente;
+    private int id;
 
-    public Cliente(String nomeUtente, String mailUtente, String passUtente, String posizioneUtente) {
+    public Cliente(String nomeUtente, String mailUtente, String posizioneUtente, String passUtente, int id) {
         this.nomeUtente = nomeUtente;
         this.mailUtente = mailUtente;
         this.posizioneUtente = posizioneUtente;
         this.passUtente = passUtente;
+        this.id = id;
     }
 
     public String getNomeUtente() {
@@ -54,4 +56,14 @@ public class Cliente extends ArchivioUtenti{
     public void setPassUtente(String passUtente) {
         this.passUtente = passUtente;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
 }

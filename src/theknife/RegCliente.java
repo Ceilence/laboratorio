@@ -4,7 +4,7 @@
  */
 package theknife;
 import javax.swing.*;
-import java.util.ArrayList;
+
 
 /**
  *
@@ -260,7 +260,7 @@ public class RegCliente extends javax.swing.JFrame {
         {
              JOptionPane.showMessageDialog(null, "Inserisci i campi obbligatori");
         }
-        Cliente cliente = new Cliente(username.getText(), email.getText(), password.getText(), posizione.getText());
+        Cliente cliente = new Cliente(username.getText(), email.getText(), password.getText(), posizione.getText(), archivio.grandezza());
         System.out.println(cliente.getNomeUtente() + "\n" + cliente.getMailUtente() + "\n" + cliente.getPassUtente() + "\n" + cliente.getPosizioneUtente());
         if(!email.getText().contains("@gmail.com"))
             erroremail.setVisible(true);

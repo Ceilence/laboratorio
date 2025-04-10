@@ -38,4 +38,8 @@ public class ArchivioUtenti {
     public void svuotaArchivio(){
         archivio.clear();
     }
+    
+    public int grandezza(){
+       return archivio.size() + 1;
+    }
 }
