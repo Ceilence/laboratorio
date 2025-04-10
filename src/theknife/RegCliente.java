@@ -3,11 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package theknife;
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
  *
- * @author Alefr
+ * @author davim Alefr AntoPar
  */
 public class RegCliente extends javax.swing.JFrame {
 
@@ -44,6 +45,7 @@ public class RegCliente extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         erroremail = new javax.swing.JLabel();
         erroreusername = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -80,9 +82,9 @@ public class RegCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Username:");
+        jLabel2.setText("*Username:");
 
-        jLabel3.setText("E-mail:");
+        jLabel3.setText("*E-mail:");
 
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +92,7 @@ public class RegCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Password:");
+        jLabel4.setText("*Password:");
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
         jLabel6.setText("Utente");
@@ -107,6 +109,8 @@ public class RegCliente extends javax.swing.JFrame {
 
         erroreusername.setText("errore! Username giá utilizzato.");
 
+        jLabel9.setText("* = campi obbligatori");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -120,17 +124,18 @@ public class RegCliente extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2))))
+                                .addComponent(jButton2))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(erroremail)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jButton1)
-                                .addComponent(jLabel4)
                                 .addComponent(username)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
                                 .addComponent(email)
                                 .addComponent(jLabel8)
                                 .addComponent(posizione)
@@ -151,7 +156,9 @@ public class RegCliente extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(66, 66, 66)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -248,11 +255,15 @@ public class RegCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (username.getText().isEmpty() || email.getText().isEmpty() || password.getText().isEmpty())
+        {
+             JOptionPane.showMessageDialog(null, "Inserisci i campi obbligatori");
+        }
         username.setText("");
         email.setText("");
         password.setText("");
         posizione.setText("");
-        Cliente cliente = new Cliente(username.getText(), email.getText(), password.getText(), posizione.getText());
+        Cliente cliente = new Cliente(username.getText().trim(), email.getText().trim(), password.getText().trim(), posizione.getText().trim());
         ArchivioUtenti archivio = new ArchivioUtenti();
         System.out.println(cliente.getNomeUtente() + "\n" + cliente.getMailUtente() + "\n" + cliente.getPassUtente() + "\n" + cliente.getPosizioneUtente());
         if(!(email.getText().endsWith("@gmail.com")))
@@ -326,6 +337,7 @@ public class RegCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField password;
