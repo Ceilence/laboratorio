@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author SSSSUGOI
  */
 public class ArchivioUtenti {
-    ArrayList<Cliente> archivio;
+    public static ArrayList<Cliente> archivio;
 
     public ArchivioUtenti() {
         archivio = new ArrayList<>();

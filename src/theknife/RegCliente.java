@@ -260,18 +260,20 @@ public class RegCliente extends javax.swing.JFrame {
         {
              JOptionPane.showMessageDialog(null, "Inserisci i campi obbligatori");
         }
-        username.setText("");
-        email.setText("");
-        password.setText("");
-        posizione.setText("");
-        Cliente cliente = new Cliente(username.getText().trim(), email.getText().trim(), password.getText().trim(), posizione.getText().trim());
+        Cliente cliente = new Cliente(username.getText(), email.getText(), password.getText(), posizione.getText());
         System.out.println(cliente.getNomeUtente() + "\n" + cliente.getMailUtente() + "\n" + cliente.getPassUtente() + "\n" + cliente.getPosizioneUtente());
-        if(!(email.getText().endsWith("@gmail.com")))
+        if(!email.getText().contains("@gmail.com"))
             erroremail.setVisible(true);
         if(archivio.cercaUsername(username.getText()) == 1)
             erroreusername.setVisible(true);
-        if(username.getText().isEmpty() || email.getText().isEmpty() || password.getText().isEmpty() || posizione.getText().isEmpty() || archivio.cercaUsername(username.getText()) == 0)
+        if(!username.getText().isEmpty() && !email.getText().isEmpty() && !password.getText().isEmpty() && !posizione.getText().isEmpty() && archivio.cercaUsername(username.getText()) == 0 && email.getText().contains("@gmail.com")){
             archivio.aggiungi(cliente);
+            Reg1 Reg1Frame = new Reg1();
+            Reg1Frame.setVisible(true);
+            Reg1Frame.pack();
+            Reg1Frame.setLocationRelativeTo(null);
+            this.dispose();
+        }
         //archivio.svuotaArchivio();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -327,7 +329,7 @@ public class RegCliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email;
     private javax.swing.JLabel erroremail;
-    private javax.swing.JLabel erroreusername;
+    public javax.swing.JLabel erroreusername;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
