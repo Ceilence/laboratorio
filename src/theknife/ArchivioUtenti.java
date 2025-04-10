@@ -10,9 +10,10 @@ import java.util.ArrayList;
  * @author SSSSUGOI
  */
 public class ArchivioUtenti {
-    ArrayList<Cliente> archivio = new ArrayList<>();
+    ArrayList<Cliente> archivio;
 
     public ArchivioUtenti() {
+        archivio = new ArrayList<>();
     }
 
     public ArrayList<Cliente> getArchivio() {
@@ -23,4 +24,14 @@ public class ArchivioUtenti {
         this.archivio = archivio;
     }
     
+    public void aggiungi(Cliente cliente){
+        archivio.add(cliente);
+    }
+    
+    public int cercaUsername(String username){
+        for(Cliente cliente: archivio)
+            if(cliente.getNomeUtente().equals(username))
+                return 1;
+        return 0;
+    }
 }

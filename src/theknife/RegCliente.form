@@ -93,6 +93,7 @@
                                   <Component id="posizione" alignment="0" max="32767" attributes="0"/>
                                   <Component id="password" pref="288" max="32767" attributes="0"/>
                               </Group>
+                              <Component id="erroreusername" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -120,7 +121,9 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="username" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="erroreusername" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="email" min="-2" pref="22" max="-2" attributes="0"/>
@@ -136,7 +139,7 @@
                   <Component id="posizione" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -226,6 +229,11 @@
         <Component class="javax.swing.JLabel" name="erroremail">
           <Properties>
             <Property name="text" type="java.lang.String" value="errore! formato mail sbagliato."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="erroreusername">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="errore! Username gi&#xe1; utilizzato."/>
           </Properties>
         </Component>
       </SubComponents>
