@@ -3,19 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package theknife;
+import java.util.ArrayList;
 
 /**
  *
  * @author davim antoniopardo alefrigio
  */
-public class Cliente {
+public class Cliente extends ArchivioUtenti{
     
     private String nomeUtente;
     private String mailUtente;
     private String posizioneUtente;
     private String passUtente;
 
-    public Cliente(String nomeUtente, String mailUtente, String posizioneUtente, String passUtente) {
+    public Cliente(String nomeUtente, String mailUtente, String passUtente, String posizioneUtente) {
         this.nomeUtente = nomeUtente;
         this.mailUtente = mailUtente;
         this.posizioneUtente = posizioneUtente;
